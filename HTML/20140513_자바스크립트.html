@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	 	<title>자바스크립트</title>
+		<style>
+		</style>
+		<script type="text/javascript">
+			var ret = fnSum(111, 333);
+//			alert("ret=" + ret);
+			function fnSum() {
+				var a = document.getElementById("numA");
+				var b = document.getElementById("numB");
+				var c = eval(a.value) + eval(b.value);
+				document.getElementById("ret").value = c;	
+			}
+
+		</script>
+	</head>
+	 <body>
+		<input type="text" id="ret" name="ret" />=
+		<input type="text" id="numA" name="numA" />+
+		<input type="text" id="numB" name="numB" />
+		<a href = "javascript:fnSum();">계산</a>
+		<div id="frult">
+			<ul>
+				<li id="apple">사과</li>
+				<li id="orange">귤</li>
+				<li id="grape">포도</li>
+			</ul>
+		</div>
+		<script type="text/javascript">	
+			var a = document.getElementById("frult");
+			alert(a.innerHTML);
+			document.write(a.innerHTML);
+		</script>
+	 </body>
+</html>
+
