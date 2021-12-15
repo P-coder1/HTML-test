@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>javascript</title>
+		<script type="text/javascript">
+			function fnSum() {
+				var a = document.getElementById("sumA");
+				var b = document.getElementById("sumB");
+				var c = eval(a.value) + eval(b.value);
+				document.getElementById("ret").value = c;
+		}
+
+		function display() {
+			var a = document.getElementsByName("fruit");
+			for(i=0; i<a.length; i++) 
+			{
+				alert(a[i].value);
+			}
+			
+			}
+	</script>
+	</head>
+	<body>
+		<input type="text" id="ret" />=
+		<input type="text" id="sumA" value= "111"/>+
+		<input type="text" id="sumB" />+
+		<a href="javascript:fnSum();">계산</a><br />
+
+		<input type="text" name="fruit" value= "사과" /><br />
+		<input type="text" name="fruit" value= "귤" /><br />
+		<input type="text" name="fruit" value= "포도" />
+		<a href="javascript:display();">display</a><br />
+		
+		<div id="canvas" onclick="javascript:alert(this.innerHTML);">편민형</div>
+		
+		<img src="http://icon.daumcdn.net/w/icon/1405/14/190702442.jpg" 
+			onmouseover="this.src='http://img.naver.net/static/www/u/2013/0731/nmms_224940510.gif'"
+			onmouseout="this.src='http://icon.daumcdn.net/w/icon/1405/14/190702442.jpg'"
+		/><br />
+		<table border="1" summary="회 원 가 입">
+			
+			<colgroup>
+				<col style="width:10%;" />
+				<col />
+			</colgroup>
+			<tbody>
+				<tr>
+					<th>이 름:</th>
+					<td><input type="text" id="userName" name="username" />
+				</tr>
+				<tr>
+					<th>아 이 디:</th>
+					<td><input type="text" id ="userId" name="userId" />
+				</tr>
+			</tbody>
+		</table>
+		<input type="submit" value="회 원 가 입" />
+
+	</body>
+</html>
