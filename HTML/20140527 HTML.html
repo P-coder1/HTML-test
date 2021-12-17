@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>javascript</title>
+		<script type="text/javascript">
+			function doSubmit() {
+				var userId = document.getElementById("userId");
+				if (userId.value == "") {
+					alert("아이디를 입력하세요.");
+					alert(profile.value);
+					userId.focus();
+					return;
+				}
+
+				var profile = document.getElementById("profile");
+				var s = profile.value;
+
+				var ext = "jpg|gif|png";
+				var exts = ext,split("|");
+				var flag = true;
+				for(i=0; i<exts.length; i++) {
+					if (s.indexOf(exts[i]) > -l) {
+						//성공
+						flag = true;
+						break;
+					} else {
+						flag = false;
+					}
+
+				}
+				if (flag != true) {
+					alert("지원되지 않는사진 형식입니다.")
+					profile.focus();
+					return;
+					}
+
+				return false;
+				var frm = document.getElementById("frm");
+				frm.submit();
+				}
+		</script>
+	</head>
+	<body>
+		<form name = "frm" id= "frm" method="get" onsubmit="javascript:doSubmit(); return false;">
+		<table border="1">
+			<colgroup>
+				<col style="width:10%;" />
+				<col />
+			</colgroup>
+			<tbody>
+				<tr>
+					<th>아 이 디:</th>
+					<td>
+						<input type="text" id ="userId" name="userId" /></td>
+				</tr>
+				<tr>
+					<th>이 름:</th>
+					<td>
+						<input type="text" id="userName" name="username" /></td>
+				</tr>
+				<tr>
+					<th>프로필사진</th>
+					<td>
+						<input type="file" id="profile" name="profile" /></td>
+				</tr>
+			</tbody>
+		</table>
+		<input type="submit" value="회 원 가 입" />
+		</form>
+	</body>
+</html>
