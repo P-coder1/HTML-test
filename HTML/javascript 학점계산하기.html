@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> javascript 실습 </title>
+		<script>
+			function calc() {
+				//사용자가 입력한 국어,영어,수학점수 파악하기
+				k=parseInt(document.sungjuk.kor.value); //문자형식으로저장된 숫자를 숫자값으로 변환 parseInt
+				e=parseInt(document.sungjuk.eng.value);
+				m=parseInt(document.sungjuk.mat.value);
+				//평균구하기
+				ave=(k+e+m)/3
+				//합격여부 구하기(세과목이 40점이상이고, 평균이 60점이상이면 '합격', 그렇지 않으면 '불합격' 처리)
+
+				if(k>39&&e>39&&m>39&&ave>=60) {
+					pan="합격"
+				} else {
+					pan="불합격"
+				}
+
+				//등급구하기(평균 90점이상이면 'A', 그렇지않고 80점이상이면'B', 그렇지않고 70점이상이면 'C', 모든
+				// 조건이 거짓인 경우는 'F')
+				if(ave>=90) {  //90점이상
+					grade="A"
+				} else if(ave>=80) {  //80~89
+					grade="B"
+				} else if(ave>=70) { //70~79
+					grade="C"
+				} else {        //70미만(69이하)
+					grade="F"
+				}
+
+
+
+				//메세지 대화상자를 이용하여결과 출력하기
+				window.alert("평균 : "+"\""+ave+"\""+"\n합격여부:"+"\""+pan+"\""+"\n등급 : "+"\""+grade+"\"")
+
+				/* 
+				대화상자에서 사용하는 출력 제어문자
+				① \n : new line(줄바꿈문자)
+				② \t : tab(탭키)
+				③ \" : "(이중부호)
+				④ \\ : \(역슬래시)
+				*/
+			}
+
+
+		</script>
+
+	</head>
+	<body>
+		<form name="sungjuk">
+			국어 : <input type="text" size=10 name="kor" /><br />
+			영어 : <input type="text" size=10 name="eng" /><br />
+			수학 : <input type="text" size=10 name="mat" /><br />
+			<a href="javascript:calc()">[결과확인]</a>
+			&nbsp;&nbsp;
+			<a href="javascript:document.sungjuk.reset()">[다시입력]</a>
+		</form>
+	</body>
+</html>
