@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> javascript 실습(성적계산하기) </title>
+				<fieldset><p>성적결과계산</p></fieldset>
+
+		<script>
+			function calc() {
+				
+				k = parseInt(document.sungjuk.kor.value); 
+				e = parseInt(document.sungjuk.eng.value);
+				m = parseInt(document.sungjuk.mat.value);
+				ave=(k+e+m)/3
+				
+				if(k>39&&e>39&&m>39&&ave>=60) {
+					pan="합격입니다 수고하셨습니다"
+				} else {
+					pan="불합격입니다 내년에 다시봐요"
+				}
+				if(ave>=90) {  
+					grade="A등급"
+				} else if(ave>=80) { 
+					grade="B등급"
+				} else if(ave>=70) { 
+					grade="C등급"
+				} else {        
+					grade="F등급"
+				}
+				window.alert("평균 : "+"\" "+ave+"\" "+"\n합격여부:"+"\""+pan+"\""+"\n등급 : "+"\""+grade+"\"")
+			}
+
+		</script>
+
+	</head>
+	<body>
+		
+		<form name="sungjuk">
+			국어 : <input type="text" size=10 name="kor" /><br />
+			영어 : <input type="text" size=10 name="eng" /><br />
+			수학 : <input type="text" size=10 name="mat" /><br />
+			<a href="javascript:calc()">[결과확인]</a>
+			&nbsp;&nbsp;
+			<a href="javascript:document.sungjuk.reset()">[다시입력]</a>
+		</form>
+	</body>
+</html>
