@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+          <head>
+                     <title>표만들기</title>
+          </head>
+          <body>
+                      <table border="1"sumary="이테이블은.....>
+                             <caption>연도별 분기내용</caption>
+                                  <colgroup>
+                                     <col style="20%" />
+                                     <col style="20%" />
+                                     <col />
+                                  </colgroup>
+                            <thead>
+                              <tr>
+                                 <th scope="col">년도</th>
+                                 <th scope="col">분기</th>
+                                 <th scope="col">내용</th>
+                               </tr>
+                            </thead>
+                            <tbody>
+                                 <tr>
+                                    <th scope="row" rowspan="2">2014</th>     'rowspan=2' 때문에
+                                    <th scope="row">1분기</th>
+                                    <td>2000만원</td>
+                                </tr>
+                                 <tr>
+                                                                            <-  이자리에 줄이없어도 정상적으로 나옴
+                                    <th scope="row">2분기</th>              
+                                    <td>3000만원</td>
+                                </tr>
+                                 <tr>
+                                    <th scope="row" rowspan="2">2013</th>     'rowspan=2' 때문에
+                                    <th scope="row">1분기</th>
+                                    <td>2000만원</td>
+                                </tr>
+                                 <tr>
+                                                                            <-  이자리에 줄이없어도 정상적으로 나옴
+                                    <th scope="row">2분기</th>              
+                                    <td>3000만원</td>
+                                </tr>
+                             </tbody>
+                       </table>
+           </body>
+</html>
